@@ -1,0 +1,22 @@
+# macOS system files
+.DS_Store
+._.DS_Store
+._*
+
+# PDF reports (submitted separately)
+*.pdf
+
+# Word documents
+*.docx
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.env/
