@@ -40,6 +40,9 @@ Train the VAE across a grid of hyperparameter combinations and report the best t
 
 Submit a properly labelled **heatmap** of the test VFE values across the grid of `(hidden_dim, latent_dim)` combinations.
 
+![Q4 Heatmap: Test VFE across Hidden and Latent Dimensions](heatmap_q4.png)
+*Figure: Test Variational Free Energy values across combinations of hidden (`[5, 50, 200, 500]`) and latent (`[5, 10, 100, 300]`) dimensions.*
+
 ---
 
 ### Q5 – Larger Architecture Grid Search
@@ -49,7 +52,10 @@ Repeat the VFE grid search experiment from Q4 with a larger set of architecture 
 - **Hidden dimensions:** `[128, 256, 512, 1024]` (i.e., `2^7, 2^8, 2^9, 2^10`)
 - **Latent dimensions:** `[2, 4, 8, 16, 32, 64, 128, 256]` (i.e., `2^1` through `2^8`)
 
-Submit a properly labelled heatmap of the test VFE values for this extended grid.
+Submit a properly labelled heatmap of the test VFE values for this larger extended grid.
+
+![Q5 Heatmap: Larger Architecture Grid Search](heatmap_q5.png)
+*Figure: Test VFE values across an extended architecture search space (hidden sizes up to 1024, latent sizes up to 256).*
 
 ---
 
@@ -58,6 +64,9 @@ Submit a properly labelled heatmap of the test VFE values for this extended grid
 Investigate the effect of **L2 regularisation (weight decay)** on the VAE's test VFE. Re-run the Q4 grid search experiments with a non-zero weight decay parameter added to the Adam optimiser.
 
 Submit a heatmap of test VFE values analogous to Q4, showing how regularisation affects the results.
+
+![Q6 Heatmap: Effect of L2 Weight Decay](heatmap_q6.png)
+*Figure: Test VFE values when training the models from Q4 with L2 regularisation (weight decay = 0.1).*
 
 ---
 
@@ -70,6 +79,9 @@ Re-interpret the Q4 experiments in terms of **model complexity**. For each `(hid
 - Ensure a couple of model sizes are explored on each side of this line
 
 This plot illustrates the classical bias-variance tradeoff in the context of deep generative models.
+
+![Q7 Plot: Test VFE vs Total Trainable Parameters](vfe_params_q7.png)
+*Figure: Variation in test VFE against total model parameters, showing the generalisation gap. The vertical line marks the scale corresponding to the total number of features in the training dataset (`60,000 * 784`).*
 
 ---
 
